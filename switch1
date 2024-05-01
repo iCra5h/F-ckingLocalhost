@@ -1,0 +1,24 @@
+Allowing Third Party Transceivers
+
+Juniper:
+
+set chassis allow-other-transceivers
+
+Cisco:
+
+service unsupported-transceiver
+
+HP/Aruba:
+
+allow-unsupported-transceiver
+
+Dell:
+
+allow unsupported-transceiver
+
+Arista:
+
+Arista Networks EOS shell
+
+[admin@localhost ~]$ touch /mnt/flash/enable3px
+[admin@localhost ~]$ sudo reboot
