@@ -6,9 +6,9 @@
 }
 
 :root {
-  --bg-color: #000000;
-  --primary-color: #FFFFFF;
-  --secondary-color: #FFFFFF;
+  --bg-color: #FFFFFF;
+  --primary-color: #000000;
+  --secondary-color: #000000;
 }
 
 body {
