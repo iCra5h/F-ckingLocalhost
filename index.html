@@ -1,209 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <!-- Encoding and Viewport -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>F*cking Localhost</title>
-  <link rel="icon" type="image/gif" href="favicon.gif">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <!-- Favicon, App Icon -->
+  <link rel="icon" type="image/png" sizes="64x64" href="<%= BASE_URL %>/web-icons/favicon-64x64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="web-icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="/loading-screen.css" />
+  <!-- Default Page Title -->
+  <title>Dashy</title>
 </head>
 
 <body>
-  <h2>Useful Links</h2>
-  <selection class="grid">
-    <div class="card">
-
-      <h3>???</h3>
-      <p><a href="https://roadmap.sh/" style="">&#128278; RoadMap.SH</a></p>
-      <p><a href="https://en.wikipedia.org/wiki/Private_network" style="">&#128278; Private Net</a></p>
-      <br />
-
-      <h3>Browsers:</h3>
-      <p><a href="https://www.google.com/chrome/" style="">&#128278; Chrome</a></p>
-      <p><a href="https://www.mozilla.org/en-US/firefox/new/" style="">&#128278; Firefox</a></p>
-      <p><a href="https://www.opera.com/gx" style="">&#128278; OperaGX</a></p>
-      <p><a href="https://www.opera.com/" style="">&#128278; Opera</a></p>
-      <p><a href="https://www.apple.com/safari/" style="">&#128278; Safari</a></p>
-      <p><a href="https://www.torproject.org/" style="">&#128278; TOR</a></p>
-      <p><a href="https://vivaldi.com/" style="">&#128278; Vivaldi</a></p>
-      <h3>Browsers:Extensions</h3>
-      <br />
-      
-      <h3>Configs:</h3>
-      <p><a href="/F-ckingLocalhost/sysctl.conf">&#128278; sysctl.conf</a></p>
-      <p><a href="https://easyengine.io/tutorials/linux/sysctl-conf/">&#128278; sysctl.conf</a></p>
-      <p><a href="/F-ckingLocalhost/ignore-lid-switch.conf">&#128278; ignore-lid-switch.conf</a></p>
-      <p><a href="/F-ckingLocalhost/juniper-unnumbered.conf">&#128278; juniper-unnumbered.conf</a></p>
-      <p><a href="/F-ckingLocalhost/transceivers-allowed.conf">&#128278; transceivers-allowed.conf</a></p>
-      <p><a href="/F-ckingLocalhost/systemd-cheatsheet.conf">&#128278; systemd-cheatsheet.conf</a></p>
-      <p><a href="/F-ckingLocalhost/mac-diskutil-dd.conf">&#128278; mac-diskutil-dd.conf</a></p>
-      <p><a href="/F-ckingLocalhost/mikrotik-hairpin-nat.conf">&#128278; mikrotik-hairpin-nat.conf</a></p>
-      <p><a href="/F-ckingLocalhost/mikrotik-port-knocking.conf">&#128278; mikrotik-port-knocking.conf</a></p>
-
-      <br />
-
-      <h3>Distros:</h3>
-      <p><a href="https://arcolinux.com/">&#128279; ArcoLinux</a></p>
-      <p><a href="https://fedoraproject.org/">&#128279; Fedora</a></p>
-      <p><a href="https://hirensbootcd.org/">&#128279; HBCD</a></p>
-      <p><a href="https://kali.org/">&#128279; Kali</a></p>
-      <p><a href="https://manjaro.org/">&#128279; Manjaro</a></p>
-      <p><a href="https://netboot.xyz/">&#128279; NetBoot</a></p>
-      <p><a href="https://opensuse.org/">&#128279; OpenSuse</a></p>
-      <p><a href="https://www.qubes-os.org/">&#128279; QubesOS</a></p>
-      <p><a href="https://www.system-rescue.org/">&#128279; SystemRescue</a></p>
-      <h3>Distros:Pi:</h3>
-      <p><a href="https://armbian.com/">&#128279; Armbian</a></p>
-      <p><a href="https://dietpi.com/">&#128279; DietPi</a></p>
-      <p><a href="https://pwnagotchi.ai/">&#128279; PWNagotchi</a></p>
-
-      
+  <!-- built files will be auto injected -->
+  <div id="app">
+    <!-- Loading screen, will be replaced when app loaded -->
+    <div class="loading-placeholder" id="loader">
+      <h1>Dashy</h1>
+      <p class="loading">Loading... </p>
+      <!-- Error message, only visible if app not mounted within 5 secs -->
+      <div class="catastrophic-error" id="err-wrap" style="display:none;">
+        <p class="err-l1">It looks like something's gone wrong...</p>
+        <p class="err-l2">
+          This is likely caused by the app source not being found at the current domain
+        </p>
+        <p class="err-l2">
+          If you need additional support, check the browser console then 
+          <a href="https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md">
+            raise a ticket
+          </a>
+        </p>
+      </div>
     </div>
-
-    <div class="card">
-
-      <h3>DNS:</h3>
-      <p><a href="https://root-servers.org/" style="">&#128278; DNS Servers</a></p>
-      <p><a href="https://www.duckdns.org/" style="">&#128278; DuckDNS</a></p>
-      <h3>DNS:Block:AD:</h3></p>
-      <p><a href="https://pi-hole.net/" style="">&#128278; Pi-Hole</a></p>
-      <br />
-
-      <h3>CheatSheets:</h3>
-      <p><a href="https://devhints.io/">&#128278; DevHints</a></p>
-      <br />
-
-      <h3>Dashboards:</h3>
-      <p><a href="https://dashy.to/">&#128278; Dashy</a></p>
-      <p><a href="https://heimdall.site/">&#128278; Heimdall</a></p>
-      
-      <h3>Monitoring:</h3>
-      <p><a href="https://www.netdata.cloud/">&#128278; NetData</a></p>
-      <p><a href="https://github.com/telekom-security/tpotce">&#128278; T-POT</a></p>
-      <p><a href="https://uptime.kuma.pet/">&#128278; Uptime Kuma</a></p>
-      <br />
-
-      <h3>URL:</h3>
-      <p><a href="https://url-parts.glitch.me/?url=https://cats.example.org.au:1234/stripes/fur.html?pattern=tabby#claws">&#128278; URL Parts</a></p>
-      <br />
-
-      <h3>Guides:</h3>
-      <p><a href="https://www.pluralsight.com/">&#9749; Pluralsight</a></p>
-      <br />
-
-      <h3>Hosting:</h3>
-      <p><a href="https://www.linode.com/">&#9749; LiNode</a></p>
-      <br />
-      
-      <h3>Editors:</h3>
-      <p><a href="https://atom-editor.cc/">&#9749; Atom</a></p>
-      <p><a href="https://notepad-plus-plus.org/">&#9749; Notepad++</a></p>
-      <p><a href="https://github.com/hakluke/how-to-exit-vim">&#9749; How To Exit Vim</a></p>
-      <p><a href="https://code.visualstudio.com/">&#9749; Visual Studio Code</a></p>
-      <br />
-    </div>
-
-    <div class="card">
-      <h3>Web-Tools:</h3>
-      <p><a href="https://crontab.guru/">&#9997; Crontab Guru</a></p>
-      <p><a href="https://fight-flash-fraud.readthedocs.io/en/latest/">&#9997; f3 - Fight Flash Fraud¶</a></p>
-      <p><a href="https://www.cidr.eu/en/">&#9997; CIDR.EU</a></p>
-      <p><a href="https://cidr.xyz/">&#9997; CIDR.XYZ</a></p>
-      <p><a href="https://iptablesgenerator.totalbits.com/">&#9997; IPTables Rules Generator</a></p>
-      <p><a href="https://test-ipv6.com/">&#9997; IPv6 Test</a></p>
-      <p><a href="https://ipv6test.google.com/">&#9997; IPv6 Test by Google</a></p>
-      <p><a href="https://pgtune.leopard.in.ua/">&#9997; PG Tune</a></p>
-      <p><a href="https://ping.pe/">&#9997; PingPE</a></p>
-      <p><a href="https://tomchen.github.io/symmetric-nat-test/">&#9997; Symmetric NAT Test</a></p>
-      <p><a href="https://www.digitalocean.com/community/tools/nginx">&#9997; Nginx Config Generator</a></p>
-      <p><a href="https://web-check.xyz/">&#9997; WebCheck</a></p>
-      <br />
-
-      <h3>Software:</h3>
-      <p><a href="https://angryip.org/">&#9997; AngryIP</a></p>
-      <p><a href="https://www.oo-software.com/en/shutup10">&#9997; ShutUp10++</a></p>
-      <p><a href="https://rufus.ie/">&#9997; Rufus</a></p>
-      <p><a href="https://tshark.dev/">&#9997; T-Shark</a></p>
-      <p><a href="https://wireshark.org/">&#9997; WireShark</a></p>     
-      <br />
-      
-      <h3>Dev:</h3>
-      <p><a href="https://codepen.io/login">&#127757; Codepen</a></p>
-      <br />
-
-      <h3>WiFi:</h3>
-      <p><a href="https://glennr.nl/s/unifi-network-controller">&#128329; Unifi Network Controller</a></p>
-      <br />
-
-      <h3>Sysadmin</h3>
-      <p><a href="https://vivaldi.com/bugreport/">&#128028; Bug Report - Vivaldi</a></p>
-    </div>
-
-    <div class="card">
-
-      <h3>News</h3>
-      <p><a href="https://arstechnica.com/">&#128640; Technology - Ars Technica</a></p>
-      <br />
-
-      <h3>VPN:</h3>
-      <p><a href="https://www.arte.tv/en/">&#9749; Arte</a></p>
-      <br />
-
-      <h3>Mac Resources:</h3>
-      <p><a href="https://support.apple.com/guide/mac-help/use-macos-recovery-on-an-intel-based-mac-mchl338cf9a8/mac">&#129440; Mac Recovery</a></p>
-      <p><a href=" https://www.apple.com/support/systemstatus/">&#129440; Mac SystemStatus</a></p>
-     
-      <br />
-
-      <h3>Social:</h3>
-      <p><a href="https://t.me/fuckinglocalhost/">&#128279; Telegram Channel</a></p>
-      <br />
-
-      <h3>Entertainment:</h3>
-      <p><a href="https://youtube.com">&#127925; YouTube</a></p>
-      <p><a href="https://music.youtube.com">&#127925; YouTube Music</a></p>
-      <p><a href="https://spotify.com">&#127925; Spotify</a></p>
-      <br />
-
-      <h3>Terminals:</h3>     
-      <p><a href="https://iterm2.com/">&#128279; iTerm2</a></p>
-      <p><a href="https://github.com/GitSquared/edex-ui">&#128279; Edex-UI</a></p>
-      <p><a href="https://konsole.kde.org/">&#128279; Konsole</a></p>
-      <p><a href="https://tabby.sh/">&#128279; Tabby</a></p>
-      <p><a href="https://gnome-terminator.org/">&#128279; Terminator</a></p>
-      <p><a href="https://termius.com/">&#128279; Termius</a></p>
-      <h3>Terminals:Customize:</h3>
-      <p><a href="https://ohmyz.sh/">&#128279; OhMyZSH</a></p>
-      <p><a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">&#128279; OhMyZSH Themes</a></p>
-      
-      <br />
-
-      <h3>About:</h3>
-      <p><a href="https://distrowatch.com/">&#129440; DW</a></p>
-      <br />
-
-      <h3>Vids:</h3>
-      <p><a href="https://www.youtube.com/@ByteByteGo">&#128278; ByteByteGo</a></p>
-      <p><a href="https://www.youtube.com/@PowerCertAnimatedVideos">&#128278; PowerCertAnimatedVideos</a></p>
-      <br />
-
-      <h3>Virtualisation:</h3>
-      <p><a href="https://www.docker.com/">&#128278; Docker</a></p>
-      <p><a href="https://hub.docker.com/">&#128278; Docker Hub</a></p>
-      <p><a href="https://docs.portainer.io//">&#128278; PortainerCE</a></p>
-      <p><a href="https://podman.io/">&#128278; Podman</a></p>
-      <p><a href="https://www.proxmox.com/">&#128278; Proxmox</a></p>
-      <p><a href="https://www.virtualbox.org/">&#128278; VirtualBox</a></p>
-      <br />
-      
-      <h3>Games:</h3>
-      <p><a href="https://lichess.org/en/">&#128278; LiChess</a></p>
-      <br />
-      
-
-    </div>
-  </selection>
+  </div>
+  <!-- Devices without JS enabled -->
+  <noscript>
+    <strong>Sorry, JavaScript needs to be enabled to run Dashy 😥</strong>
+  </noscript>
+  
+  <!-- Show error message if app not mounted within reasonable time frame -->
+  <script>
+    setTimeout(() => {
+      const loaderElem = document.getElementById('loader');
+      if (loaderElem) loaderElem.classList.add('still-not-loaded');
+    }, 7500);
+  </script>
 </body>
-
 </html>
